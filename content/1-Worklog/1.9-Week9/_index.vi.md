@@ -1,27 +1,30 @@
----
+﻿---
 title: "Worklog Tuần 9"
-date: 2024-01-01
-weight: 1
+date: 2026-06-29
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
-
-
 ### Mục tiêu tuần 9:
-* Triển khai Epic 4: Các công cụ hỗ trợ tự học chủ động (Active Learning Tools).
-* Xây dựng mô hình Async Worker Pattern cho Backend.
+* Thiết kế kiến trúc tổng thể cho project Hệ thống Quản Lý Phòng Trọ (frontend, backend, cơ sở dữ liệu).
+* Ánh xạ các thành phần hệ thống với dịch vụ AWS phù hợp và xây dựng hoàn thiện Architecture Diagram.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu / Công cụ |
 | --- | --- | --- | --- | --- |
-| 2 | - Thiết lập mô hình Async Worker: <br>&emsp; + API Handler ghi DynamoDB trả jobId <br>&emsp; + Lambda kích hoạt bất đồng bộ (`Event`) | 12/06/2026 | 12/06/2026 | AWS Lambda Invocation |
-| 3 | - Xây dựng cơ chế Polling `GET /job/{jobId}` liên tục trên Frontend để cập nhật trạng thái | 13/06/2026 | 13/06/2026 | React Query / SWR |
-| 4 | - Phát triển AI Quiz Generator Lambda <br> - Thiết kế UI modal trắc nghiệm tương tác trên Web | 14/06/2026 | 14/06/2026 | Prompt Engineering |
-| 5 | - Phát triển AI Flashcard Generator Lambda <br> - Thiết kế UI thẻ ghi nhớ dạng lật (Swiper UI) | 15/06/2026 | 15/06/2026 | Swiper.js |
-| 6 | - Kiểm thử tích hợp luồng sinh nội dung Quiz và Flashcard <br> - Đảm bảo DynamoDB lưu đúng cấu trúc JSON trả về | 16/06/2026 | 16/06/2026 | Nội bộ |
+| 2 | - Rà soát yêu cầu nghiệp vụ và xác định các tiêu chí thiết kế kiến trúc cho project.<br> - Lựa chọn mô hình triển khai phù hợp với quy mô và mục tiêu của hệ thống. | 29/06/2026 | 29/06/2026 | AWS Architecture Best Practices |
+| 3 | - Xác định các thành phần frontend, backend, cơ sở dữ liệu và dịch vụ hỗ trợ.<br> - Mô tả trách nhiệm và giao tiếp giữa các thành phần. | 30/06/2026 | 30/06/2026 | System Architecture Doc |
+| 4 | - Ánh xạ các thành phần hệ thống với dịch vụ AWS phù hợp.<br> - Xây dựng bản đầu của Architecture Diagram. | 01/07/2026 | 01/07/2026 | AWS Architecture Icons / Tools |
+| 5 | - Bổ sung luồng request, luồng dữ liệu, phân quyền và các điểm kiểm soát bảo mật vào sơ đồ.<br> - Kiểm tra tính hợp lý của kiến trúc và khả năng triển khai. | 02/07/2026 | 02/07/2026 | Security & Data Flow Specs |
+| 6 | - Nghiên cứu sâu hơn nghiệp vụ quản lý phòng trọ.<br> - Hoàn thiện Architecture Diagram và cập nhật tài liệu thiết kế theo góp ý. | 03/07/2026 | 03/07/2026 | Tài liệu thiết kế hoàn chỉnh |
 
 ### Kết quả đạt được tuần 9:
-* Áp dụng thành công Async Worker, xử lý triệt để lỗi API Gateway Timeout 29s cho các tác vụ AI nặng.
-* Người dùng có thể tự tạo bộ câu hỏi trắc nghiệm và thẻ từ vựng trực tiếp từ bài báo khoa học.
+* Xác định kiến trúc tổng thể gồm frontend, backend, cơ sở dữ liệu và các dịch vụ hỗ trợ.
+* Xây dựng Architecture Diagram, mô tả luồng request, luồng dữ liệu, phân quyền và các điểm kiểm soát bảo mật.
+* Ánh xạ các thành phần hệ thống với dịch vụ AWS và cập nhật thiết kế theo góp ý.
 
+### Đánh giá tuần 9:
+* **Mức độ hoàn thành:** Tốt. Kiến trúc đã thể hiện được các thành phần chính và luồng giao tiếp của hệ thống.
+* **Ưu điểm:** Có khả năng liên kết yêu cầu nghiệp vụ với giải pháp kỹ thuật và dịch vụ AWS.
+* **Điểm cần cải thiện:** Cần bổ sung phân tích chi phí, khả năng mở rộng, sao lưu và phương án phục hồi sự cố.

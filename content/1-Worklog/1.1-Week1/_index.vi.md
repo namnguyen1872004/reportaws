@@ -1,29 +1,30 @@
----
+﻿---
 title: "Worklog Tuần 1"
-date: 2024-01-01
+date: 2026-05-04
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
 
-
 ### Mục tiêu tuần 1:
-* Đọc hiểu tài liệu onboarding dự án VietAI Scholar (Luminary).
-* Thiết lập môi trường phát triển cục bộ cho cả Frontend (Next.js) và Backend (Node.js, AWS CDK).
+* Tham gia định hướng, làm quen với cơ cấu tổ chức, nội quy làm việc và quy định bảo mật tại đơn vị thực tập.
+* Thiết lập tài khoản AWS, AWS Builder Profile, cấu hình cảnh báo chi phí và chuẩn bị môi trường công cụ thực hành.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu / Công cụ |
 | --- | --- | --- | --- | --- |
-| 2 | - Đọc hiểu Product Overview của Luminary <br> - Nắm bắt kiến trúc hệ thống Monorepo (fe/ và be/) | 17/04/2026 | 17/04/2026 | Tài liệu Onboarding |
-| 3 | - Thiết lập môi trường Frontend: <br>&emsp; + Cài đặt Node.js 20.x <br>&emsp; + Init Next.js (16.2.7) App Router <br>&emsp; + Cài đặt Tailwind CSS v4 | 18/04/2026 | 18/04/2026 | Next.js Docs, Tailwind Docs |
-| 4 | - Thiết lập môi trường Backend: <br>&emsp; + Cài đặt AWS CLI & cấu hình thông tin <br>&emsp; + Init dự án AWS CDK bằng TypeScript | 19/04/2026 | 19/04/2026 | AWS CDK Docs |
-| 5 | - Cài đặt các thư viện lõi Frontend: `katex`, `mermaid`, `next-auth` <br> - Chạy thử Playwright để làm quen với E2E Testing | 20/04/2026 | 20/04/2026 | Playwright Docs |
-| 6 | - Cài đặt các thư viện lõi Backend: `@google/generative-ai`, `groq-sdk`, `@qdrant/js-client-rest` <br> - Cấu hình Jest test cho Backend | 21/04/2026 | 21/04/2026 | Npm Docs |
+| 2 | - Tham gia buổi định hướng; tìm hiểu cơ cấu tổ chức, nội quy làm việc và quy định bảo mật thông tin tại đơn vị thực tập.<br> - Tiếp nhận kế hoạch thực tập, phương thức trao đổi với cán bộ hướng dẫn và yêu cầu về báo cáo tiến độ. | 04/05/2026 | 04/05/2026 | Tài liệu Nội quy & Bảo mật AWS VN |
+| 3 | - Tìm hiểu quy trình giao việc, quy trình báo cáo hằng ngày/tuần và cách lưu trữ tài liệu thực tập.<br> - Thiết lập lịch làm việc cá nhân, mục tiêu học tập và danh sách nội dung cần hoàn thành trong kỳ thực tập. | 05/05/2026 | 05/05/2026 | Kế hoạch thực tập |
+| 4 | - Tạo AWS Account và AWS Builder Profile cá nhân; kích hoạt các thiết lập bảo mật cần thiết cho tài khoản.<br> - Làm quen với AWS Management Console và cách lựa chọn đúng Region khi thực hành. | 06/05/2026 | 06/05/2026 | AWS Management Console |
+| 5 | - Thiết lập AWS Budgets và cảnh báo chi phí nhằm kiểm soát ngân sách sử dụng dịch vụ.<br> - Tìm hiểu các nguyên tắc tránh phát sinh chi phí ngoài kế hoạch và quy trình dọn dẹp tài nguyên sau bài lab. | 07/05/2026 | 07/05/2026 | AWS Budgets Docs |
+| 6 | - Cài đặt Kiro IDE, Kiro CLI và các công cụ hỗ trợ thực hành.<br> - Đọc tổng quan AWS Well-Architected Framework và hoàn thành các nội dung khởi đầu của Module 1 thuộc chương trình The First Cloud Journey. | 08/05/2026 | 08/05/2026 | Kiro IDE, AWS Well-Architected Framework |
 
 ### Kết quả đạt được tuần 1:
-* Nắm vững ý tưởng cốt lõi của Luminary: Không gian làm việc song ngữ thông minh tích hợp AI.
-* Cấu hình thành công AWS CLI và khởi tạo được cấu trúc thư mục dự án Monorepo.
-* Cài đặt đầy đủ các package cần thiết cho Frontend và Backend.
-* Chạy thành công ứng dụng ở môi trường local và các bộ test cơ bản.
+* Nắm được nội quy, quy trình làm việc, phương thức báo cáo và yêu cầu bảo mật tại đơn vị thực tập.
+* Tạo và cấu hình AWS Account, AWS Builder Profile; thiết lập AWS Budgets để theo dõi chi phí.
+* Cài đặt Kiro IDE, Kiro CLI; bước đầu hiểu AWS Well-Architected Framework và hoàn thành nội dung khởi đầu của chương trình The First Cloud Journey.
 
-
+### Đánh giá tuần 1:
+* **Mức độ hoàn thành:** Tốt. Hoàn thành đầy đủ các nội dung định hướng và chuẩn bị môi trường thực hành.
+* **Ưu điểm:** Chủ động làm quen công cụ, có ý thức kiểm soát chi phí và tuân thủ quy trình.
+* **Điểm cần cải thiện:** Cần tiếp tục rèn luyện thao tác trên AWS Management Console và củng cố thuật ngữ AWS cơ bản.

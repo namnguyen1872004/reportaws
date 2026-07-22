@@ -27,7 +27,7 @@ Kiến trúc Auto Scaling Group (ASG) giúp tự động điều chỉnh lượn
 ### 3. Kiến trúc giải pháp 
 Nền tảng được triển khai trên AWS Region `ap-southeast-1` (Singapore) với thiết kế mạng phân tán trên hai Availability Zones (Multi-AZ) để đảm bảo tính sẵn sàng cao.
 
-![Architecture](/workshop-website/images/2-Proposal/Picture1.png)
+![Architecture](/reportaws/images/2-Proposal/image1.png)
 
 *Dịch vụ AWS và Công nghệ cốt lõi* 
 - *AWS IAM & Security*: Quản lý quyền truy cập bằng IAM Roles cho EC2/Lambda và bảo vệ thông tin bằng AWS Secrets Manager.

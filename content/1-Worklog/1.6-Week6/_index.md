@@ -1,25 +1,30 @@
----
+﻿---
 title: "Week 6 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-08
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
 
-
 ### Week 6 Objectives:
-* Start Epic 3: Build Translation & Math Formatting Pipeline using AWS Step Functions.
+* Understand architectural transition methods from Monolith to Microservices and survey AWS AI services.
+* Build serverless application workflows using AWS Lambda, API Gateway, DynamoDB, AWS SAM, Cognito, and CI/CD pipelines with CodePipeline.
 
-### Tasks to Deploy This Week:
-| Day | Task | Start Date | Completion Date | Documentation Source |
+### Tasks to Implement This Week:
+| Day | Task | Start Date | End Date | Documentation / Tools |
 | --- | --- | --- | --- | --- |
-| 2 | - Define State Machine on AWS Step Functions using AWS CDK <br> - Set up S3 Event Notification to trigger pipeline | 22/05/2026 | 22/05/2026 | AWS Step Functions |
-| 3 | - Write `Extract` Lambda: Use `pdfjs-dist` to extract text from PDF <br> - Parse basic structure | 23/05/2026 | 23/05/2026 | PDF.js Docs |
-| 4 | - Write `Translate` Lambda: Integrate `groq-sdk` (Llama 3.3) for academic contextual translation <br> - Detect LaTeX | 24/05/2026 | 24/05/2026 | Groq API Docs |
-| 5 | - Write `Merge` Lambda: Merge translation and source into a bilingual Markdown file <br> - Insert hidden `{#chunk-index}` anchors | 25/05/2026 | 25/05/2026 | Node.js File System |
-| 6 | - Set up Retry/Catch mechanisms in Step Functions when AI APIs timeout <br> - Run end-to-end pipeline testing | 26/05/2026 | 26/05/2026 | AWS CDK Step Functions |
+| Mon | - Explore reasons and methodologies for transitioning architectures from Monolith to Microservices.<br> - Survey various AWS AI services and their application integration capabilities. | 08/06/2026 | 08/06/2026 | AWS Microservices & AI Docs |
+| Tue | - Build basic serverless functions using AWS Lambda and Amazon API Gateway.<br> - Verify request/response payloads, execution logs, and error handling. | 09/06/2026 | 09/06/2026 | AWS Lambda & API Gateway |
+| Wed | - Integrate Amazon DynamoDB as the storage layer for serverless APIs.<br> - Explore Amazon Cognito and user authentication mechanisms for applications. | 10/06/2026 | 10/06/2026 | DynamoDB & Amazon Cognito |
+| Thu | - Use AWS SAM to define, build, and deploy serverless applications.<br> - Verify generated stacks and resources, and execute application version updates. | 11/06/2026 | 11/06/2026 | AWS SAM CLI Docs |
+| Fri | - Understand CI/CD workflows using AWS CodePipeline.<br> - Survey CloudWatch, AWS X-Ray, and AWS AppSync for monitoring, tracing, and API building. | 12/06/2026 | 12/06/2026 | CodePipeline, X-Ray & AppSync |
 
-### Week 6 Achievements:
-* Completed a robust asynchronous processing system with Step Functions.
-* Uploaded documents are automatically processed through the workflow: Extract -> Translate -> Merge.
-* Effectively handled third-party API downtime risks using the Retry mechanism.
+### Week 6 Achieved Results:
+* Understood strategic transitions from Monolith to Microservices and surveyed AWS AI services.
+* Built serverless workflows with AWS Lambda, Amazon API Gateway, Amazon DynamoDB, AWS SAM, and Amazon Cognito.
+* Explored CI/CD via AWS CodePipeline; monitored and traced using CloudWatch and AWS X-Ray; surveyed AWS AppSync.
+
+### Week 6 Evaluation:
+* **Completion Level:** Good. Grasped core components of serverless architectures and automated deployment workflows.
+* **Strengths:** Able to differentiate the roles of API, compute, database, authentication, and monitoring layers.
+* **Areas for Improvement:** Need to build an integrated use case to solidify the interconnections between these services.

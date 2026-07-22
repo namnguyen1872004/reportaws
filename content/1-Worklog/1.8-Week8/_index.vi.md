@@ -1,27 +1,30 @@
----
+﻿---
 title: "Worklog Tuần 8"
-date: 2024-01-01
-weight: 1
+date: 2026-06-22
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
-
-
 ### Mục tiêu tuần 8:
-* Hoàn thành Epic 3: Trợ lý Chat thông minh (Agentic Chat Logic).
+* Khởi động project use case thực tế: Hệ thống Quản Lý Phòng Trọ.
+* Xác định bối cảnh, phạm vi, mục tiêu, thu thập yêu cầu (chức năng, phi chức năng) và xây dựng Use Case Diagram.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu / Công cụ |
 | --- | --- | --- | --- | --- |
-| 2 | - Tích hợp mô hình `gemini-2.5-flash` cho luồng xử lý câu hỏi của người dùng <br> - Thiết lập system prompt | 05/06/2026 | 05/06/2026 | Google Gemini API |
-| 3 | - Phát triển Function Calling (Tool Use) cho LLM: `vectorSearch` (truy vấn Qdrant) | 06/06/2026 | 06/06/2026 | Function Calling Docs |
-| 4 | - Phát triển Tool `fetchAdjacentParagraphs` chống mất ngữ cảnh <br> - Tool `readExecutiveSummary` từ DynamoDB | 07/06/2026 | 07/06/2026 | Nội bộ |
-| 5 | - Viết logic tự động đính kèm liên kết trích dẫn ngược `[Đoạn X]` vào câu trả lời <br> - Cấu hình Scroll-to-view trên FE | 08/06/2026 | 08/06/2026 | DOM Manipulation |
-| 6 | - Kiểm thử toàn diện chất lượng câu trả lời của AI Tutor <br> - Xử lý stream response (Server-Sent Events) | 09/06/2026 | 09/06/2026 | Web Streams API |
+| 2 | - Bắt đầu project use case thực tế: Hệ thống Quản Lý Phòng Trọ.<br> - Xác định bối cảnh, đối tượng sử dụng và vấn đề nghiệp vụ cần giải quyết. | 22/06/2026 | 22/06/2026 | Tài liệu đặc tả yêu cầu |
+| 3 | - Xác định phạm vi và mục tiêu của hệ thống.<br> - Phân chia các nhóm chức năng chính: phòng trọ, người thuê, hợp đồng, hóa đơn và báo cáo. | 23/06/2026 | 23/06/2026 | Kế hoạch dự án |
+| 4 | - Thu thập và mô tả yêu cầu chức năng, yêu cầu phi chức năng.<br> - Xác định actor, quyền hạn và các ràng buộc nghiệp vụ. | 24/06/2026 | 24/06/2026 | Business Requirement Doc |
+| 5 | - Vẽ Use Case Diagram và mô tả các use case quan trọng.<br> - Kiểm tra tính đầy đủ, tránh trùng lặp và chuẩn hóa tên chức năng. | 25/06/2026 | 25/06/2026 | UML Modeling Tools |
+| 6 | - Hoàn thiện tài liệu mô tả hệ thống, phạm vi và Use Case Diagram.<br> - Trình bày kết quả với người hướng dẫn, tiếp nhận góp ý và cập nhật tài liệu. | 26/06/2026 | 26/06/2026 | Tài liệu phân tích thiết kế |
 
 ### Kết quả đạt được tuần 8:
-* AI Tutor có khả năng đọc hiểu tài liệu sâu sắc, tự chủ động gọi các công cụ tìm kiếm ngữ cảnh.
-* Trải nghiệm hỏi đáp mượt mà, phản hồi có trích dẫn `[Đoạn X]` bấm vào tự cuộn đến đúng vị trí bài báo.
+* Khởi động project Hệ thống Quản Lý Phòng Trọ và xác định rõ bối cảnh, đối tượng sử dụng, phạm vi và mục tiêu.
+* Xác định các nhóm chức năng chính: phòng trọ, người thuê, hợp đồng, hóa đơn và báo cáo.
+* Hoàn thiện yêu cầu chức năng, yêu cầu phi chức năng, actor và Use Case Diagram ban đầu.
 
-
+### Đánh giá tuần 8:
+* **Mức độ hoàn thành:** Tốt. Đã hình thành bộ yêu cầu và phạm vi đủ làm cơ sở cho giai đoạn thiết kế.
+* **Ưu điểm:** Nội dung phân tích có cấu trúc và bám sát nghiệp vụ quản lý phòng trọ.
+* **Điểm cần cải thiện:** Cần tiếp tục xác minh yêu cầu với người hướng dẫn và ưu tiên các chức năng quan trọng cho phiên bản đầu.

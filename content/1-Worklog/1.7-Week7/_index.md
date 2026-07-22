@@ -1,25 +1,30 @@
----
+﻿---
 title: "Week 7 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-15
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
 
-
 ### Week 7 Objectives:
-* Complete Epic 3: Data Vectorization (RAG Ingestion) and Agentic RAG Configuration.
+* Practice containerization with Docker, explore Amazon ECS, AWS Fargate, Amazon EKS, Service Mesh, and container security.
+* Understand modern data platforms: Data Lakes, ETL/ELT, Data Warehousing, and data visualization using Amazon QuickSight.
 
-### Tasks to Deploy This Week:
-| Day | Task | Start Date | Completion Date | Documentation Source |
+### Tasks to Implement This Week:
+| Day | Task | Start Date | End Date | Documentation / Tools |
 | --- | --- | --- | --- | --- |
-| 2 | - Write `Ingest` Lambda (final step of Step Functions) <br> - Configure Markdown chunking based on anchors | 29/05/2026 | 29/05/2026 | Basic RAG Logic |
-| 3 | - Connect `@google/generative-ai` (`gemini-embedding-001`) to get 768-dimensional vectors for each chunk | 30/05/2026 | 30/05/2026 | Google Gemini API |
-| 4 | - Connect `@qdrant/js-client-rest` to save vectors to Qdrant Cloud <br> - Attach metadata (userId, jobId) | 31/05/2026 | 31/05/2026 | Qdrant Docs |
-| 5 | - Build AI Tutor Panel (3rd column of the Workspace) <br> - Configure basic chat UI | 01/06/2026 | 01/06/2026 | Tailwind CSS |
-| 6 | - Integrate Semantic Scholar API for "Related Papers" tab to display Open Access articles | 02/06/2026 | 02/06/2026 | Semantic Scholar API |
+| Mon | - Review Dockerfiles, images, containers, registries, and application containerization principles.<br> - Package a sample application and verify local test runs. | 15/06/2026 | 15/06/2026 | Docker Documentation |
+| Tue | - Explore Amazon ECS and AWS Fargate.<br> - Deploy sample tasks/services, configure networking, and check container logs. | 16/06/2026 | 16/06/2026 | Amazon ECS & Fargate Docs |
+| Wed | - Explore Amazon EKS and Kubernetes components on AWS.<br> - Practice deployment structures, services, and check workload health statuses. | 17/06/2026 | 17/06/2026 | Amazon EKS & K8s Docs |
+| Thu | - Research Service Mesh, container security, and secret management.<br> - Study CI/CD workflows when migrating Monolith apps to Microservices on ECS/EKS. | 18/06/2026 | 18/06/2026 | AWS App Mesh & Security |
+| Fri | - Learn about Data Lakes, ETL/ELT, and Data Warehousing.<br> - Perform overview practice on data visualization using Amazon QuickSight and log results. | 19/06/2026 | 19/06/2026 | AWS Data Lake & QuickSight |
 
-### Week 7 Achievements:
-* Completed RAG (Retrieval-Augmented Generation) infrastructure: Data is chunked, embedded, and upserted into Qdrant Vector DB.
-* Finished the 3-column Workspace UI (Library - Reader - RAG Chat).
-* Static lookups for related papers function properly.
+### Week 7 Achieved Results:
+* Practiced containerization with Docker and explored Amazon ECS, Amazon EKS, AWS Fargate, Service Mesh, and container security.
+* Mastered transition workflows from Monolith to Microservices and CI/CD directions for containers.
+* Understood Data Lakes, ETL/ELT, Data Warehousing, and practiced data visualization with Amazon QuickSight.
+
+### Week 7 Evaluation:
+* **Completion Level:** Good. Gained a comprehensive overview of modern container and data platforms on AWS.
+* **Strengths:** Approached both application deployment and data exploitation aspects.
+* **Areas for Improvement:** Amazon EKS and Service Mesh have high complexity; need more time for practical operations and troubleshooting.

@@ -1,26 +1,30 @@
----
+﻿---
 title: "Week 3 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-18
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
 
-
 ### Week 3 Objectives:
-* Complete Epic 1: Build the Bilingual Side-by-Side Reader.
-* Render specialized structures (LaTeX Mathematics).
+* Practice extensively on Amazon EC2, Amazon S3 storage, IAM permission management following least privilege principles, and get familiar with AWS Cloud9.
+* Deploy Static Website Hosting on S3, integrate Amazon CloudFront CDN, and configure Amazon RDS databases.
 
-### Tasks to Deploy This Week:
-| Day | Task | Start Date | Completion Date | Documentation Source |
+### Tasks to Implement This Week:
+| Day | Task | Start Date | End Date | Documentation / Tools |
 | --- | --- | --- | --- | --- |
-| 2 | - Design Bilingual Reader UI (2 parallel columns on Desktop, EN/VI tabs on Mobile) | 01/05/2026 | 01/05/2026 | Tailwind CSS |
-| 3 | - Develop Sync Scroll feature between the source and translated columns | 02/05/2026 | 02/05/2026 | React Refs & Scroll |
-| 4 | - Integrate `katex` library (^0.17.0) to render math formulas <br> - Handle parsing raw LaTeX code from Markdown | 03/05/2026 | 03/05/2026 | KaTeX Docs |
-| 5 | - Develop "Quick Copy LaTeX code" action button for formulas | 04/05/2026 | 04/05/2026 | Browser Clipboard API |
-| 6 | - Mock bilingual Markdown data to test Reader UI <br> - Optimize UI responsiveness for mobile devices | 05/05/2026 | 05/05/2026 | Internal |
+| Mon | - Launch Amazon EC2, select appropriate AMIs, instance types, and storage configurations.<br> - Create IAM Users/Roles for administrative tasks and grant access following the least privilege principle. | 18/05/2026 | 18/05/2026 | Amazon EC2 & IAM Docs |
+| Tue | - Create Amazon S3 buckets; explore bucket policies, object ownership, and Block Public Access.<br> - Enable Versioning and test uploading, downloading, and restoring object versions. | 19/05/2026 | 19/05/2026 | Amazon S3 Docs |
+| Wed | - Get familiar with the AWS Cloud9 programming environment.<br> - Deploy Static Website Hosting on Amazon S3 and verify access to static content. | 20/05/2026 | 20/05/2026 | AWS Cloud9 & S3 Hosting |
+| Thu | - Combine Amazon CloudFront with S3 for content delivery; explore caching and invalidation.<br> - Practice copying data to another Region and evaluate data redundancy strategies. | 21/05/2026 | 21/05/2026 | Amazon CloudFront Docs |
+| Fri | - Launch Amazon RDS, configure connections from EC2 to RDS, and test data queries.<br> - Practice backup/recovery; explore Lightsail Database, snapshots, and sample apps like WordPress, PrestaShop, and Akaunting. | 22/05/2026 | 22/05/2026 | Amazon RDS & Lightsail Docs |
 
-### Week 3 Achievements:
-* Completed the smart bilingual reader, responsive across multiple devices.
-* Sync Scroll feature functions smoothly.
-* Complex mathematical formulas in academic papers are correctly rendered in standard format via KaTeX.
+### Week 3 Achieved Results:
+* Practiced Amazon EC2, Amazon S3, and IAM User/Role management following appropriate permission principles.
+* Deployed Static Website Hosting on S3, combined with Amazon CloudFront, Versioning, and cross-Region data replication.
+* Launched Amazon RDS, connected applications from EC2, and practiced backup/recovery; explored Lightsail Database and snapshots.
+
+### Week 3 Evaluation:
+* **Completion Level:** Good. Completed multiple practical exercises connecting compute, storage, CDN, and databases.
+* **Strengths:** Capable of connecting multiple AWS services into a complete deployment workflow.
+* **Areas for Improvement:** Need to systematize IAM permissions, data security, and costs for each deployment option.

@@ -6,12 +6,30 @@ chapter: false
 ---
 
 # Báo cáo thực tập
+
+<style>
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #FF9900;
+}
+</style>
+
+<center>
+
+<img src="/reportaws/images/avatar.jpg" class="avatar" alt="Avatar">
+
+</center>
+
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Lê Thân
 
-&emsp; **Số điện thoại:** 0393157003
+&emsp; **Họ và tên:** Nguyễn Hoài Nam
 
-&emsp; **Email:** lethan0972@gmail.com
+&emsp; **Số điện thoại:** 0941969269
+
+&emsp; **Email:** hoainam1872004@gmail.com
 
 &emsp; **Trường:** Đại học Công nghệ TP.HCM
 
@@ -23,10 +41,7 @@ chapter: false
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Thời gian thực tập:** Từ ngày 17/04/2026 đến ngày 09/07/2026
-
-
-
+&emsp; **Thời gian thực tập:** Từ ngày 04/05/2026 đến ngày 25/07/2026
 
 ### Nội dung báo cáo
 

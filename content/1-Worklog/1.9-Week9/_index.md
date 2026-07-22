@@ -1,25 +1,30 @@
----
+﻿---
 title: "Week 9 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-29
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
-
 ### Week 9 Objectives:
-* Deploy Epic 4: Active Learning Tools.
-* Build Async Worker Pattern for Backend.
+* Design the overall system architecture for the Boarding House Management System project (frontend, backend, database).
+* Map system components to appropriate AWS services and develop a comprehensive Architecture Diagram.
 
-### Tasks to Deploy This Week:
-| Day | Task | Start Date | Completion Date | Documentation Source |
+### Tasks to Implement This Week:
+| Day | Task | Start Date | End Date | Documentation / Tools |
 | --- | --- | --- | --- | --- |
-| 2 | - Set up Async Worker model: <br>&emsp; + API Handler writes to DynamoDB and returns jobId <br>&emsp; + Lambda triggers asynchronously (`Event`) | 12/06/2026 | 12/06/2026 | AWS Lambda Invocation |
-| 3 | - Build continuous Polling mechanism `GET /job/{jobId}` on Frontend to update status | 13/06/2026 | 13/06/2026 | React Query / SWR |
-| 4 | - Develop AI Quiz Generator Lambda <br> - Design interactive quiz modal UI on Web | 14/06/2026 | 14/06/2026 | Prompt Engineering |
-| 5 | - Develop AI Flashcard Generator Lambda <br> - Design flip card memory UI (Swiper UI) | 15/06/2026 | 15/06/2026 | Swiper.js |
-| 6 | - Integration testing for Quiz and Flashcard generation flows <br> - Ensure DynamoDB stores the returned JSON structure correctly | 16/06/2026 | 16/06/2026 | Internal |
+| Mon | - Review business requirements and define architectural design criteria for the project.<br> - Select a deployment model suitable for system scale and objectives. | 29/06/2026 | 29/06/2026 | AWS Architecture Best Practices |
+| Tue | - Identify frontend, backend, database components, and supporting services.<br> - Describe responsibilities and inter-component communication. | 30/06/2026 | 30/06/2026 | System Architecture Doc |
+| Wed | - Map system components to suitable AWS services.<br> - Build the initial version of the Architecture Diagram. | 01/07/2026 | 01/07/2026 | AWS Architecture Icons / Tools |
+| Thu | - Add request flows, data flows, authorization, and security control checkpoints to the diagram.<br> - Verify architectural rationality and deployment feasibility. | 02/07/2026 | 02/07/2026 | Security & Data Flow Specs |
+| Fri | - Dive deeper into boarding house management domain logic.<br> - Finalize the Architecture Diagram and update design documentation based on feedback. | 03/07/2026 | 03/07/2026 | Finalized Design Document |
 
-### Week 9 Achievements:
-* Successfully applied Async Worker pattern, resolving the 29s API Gateway Timeout issue for heavy AI tasks.
-* Users can generate multiple-choice quizzes and flashcards directly from scientific papers.
+### Week 9 Achieved Results:
+* Defined overall architecture comprising frontend, backend, database, and supporting services.
+* Built the Architecture Diagram detailing request flows, data flows, authorization, and security checkpoints.
+* Mapped system components to AWS services and updated designs based on feedback.
+
+### Week 9 Evaluation:
+* **Completion Level:** Good. The architecture clearly represents core components and communication workflows.
+* **Strengths:** Capable of linking business requirements with technical solutions and AWS services.
+* **Areas for Improvement:** Need to supplement cost analysis, scalability, backups, and disaster recovery strategies.

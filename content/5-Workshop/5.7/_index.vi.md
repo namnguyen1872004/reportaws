@@ -17,8 +17,8 @@ Event pipeline chỉ được tích hợp sau khi database và media flow ổn �
 | Retention | 4 ngày |
 | Encryption | SQS-managed SSE hoặc KMS theo phạm vi |
 | maxReceiveCount | 3 |
-![Hinh31](/workshop-website/images/5-Workshop/image31.png)
-![Hinh32](/workshop-website/images/5-Workshop/image32.png)
+![Hinh31](/reportaws/images/5-Workshop/image31.png)
+![Hinh32](/reportaws/images/5-Workshop/image32.png)
 5.7.2. Event contract
 ```json
 {
@@ -47,18 +47,18 @@ Payload chỉ chứa metadata cần cho consumer; media được tham chiếu b�
 Tiêu chí quan trọng: Manual `SendMessage` chỉ chứng minh hạ tầng queue. Tích hợp chỉ hoàn tất khi một hành động đơn hàng thật từ ứng dụng tạo message đúng contract.
 
 5.7.4. Lambda consumer
-![Hinh33](/workshop-website/images/5-Workshop/image33.png)
-![Hinh34](/workshop-website/images/5-Workshop/image34.png)
-![Hinh35](/workshop-website/images/5-Workshop/image35.png)
-![Hinh36](/workshop-website/images/5-Workshop/image36.png)
+![Hinh33](/reportaws/images/5-Workshop/image33.png)
+![Hinh34](/reportaws/images/5-Workshop/image34.png)
+![Hinh35](/reportaws/images/5-Workshop/image35.png)
+![Hinh36](/reportaws/images/5-Workshop/image36.png)
 Lambda role cần quyền ReceiveMessage, DeleteMessage, ChangeMessageVisibility, GetQueueAttributes và quyền SES cần thiết.
 Handler phải kiểm tra `eventId` để xử lý idempotent vì SQS có thể giao lại message.
 Chỉ xóa message sau khi xử lý thành công. Lỗi phải được throw để SQS/Lambda retry và chuyển DLQ khi đủ số lần.
 Khi rollout lần đầu, có thể để trigger Disabled, test handler bằng payload mẫu rồi mới Enable.
 
 5.7.5. Amazon SES
-![Hinh37](/workshop-website/images/5-Workshop/image37.png)
-![Hinh38](/workshop-website/images/5-Workshop/image38.png)
+![Hinh37](/reportaws/images/5-Workshop/image37.png)
+![Hinh38](/reportaws/images/5-Workshop/image38.png)
 ```env
 SES_FROM_ADDRESS=<VERIFIED_SENDER>
 SES_REPLY_TO=<OPTIONAL_REPLY_TO>

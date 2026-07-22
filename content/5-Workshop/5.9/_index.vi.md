@@ -9,8 +9,8 @@ pre: " <b> 5.9. </b> "
 
 5.9.1. Launch Template và Auto Scaling
 Launch Template dùng AMI phù hợp, instance profile `delivery-ec2-role`, `delivery-ec2-sg` và root volume đủ chỗ. ASG đặt trong hai application subnets; để tiết kiệm workshop có thể min/desired/max = 1/1/1 hoặc max = 2 khi cần thử scale.
-![Hinh40](/workshop-website/images/5-Workshop/image40.png)
-![Hinh43](/workshop-website/images/5-Workshop/image43.png)
+![Hinh40](/reportaws/images/5-Workshop/image40.png)
+![Hinh43](/reportaws/images/5-Workshop/image43.png)
 5.9.2. Target Group và ALB
 
 | Thành phần | Cấu hình |
@@ -19,8 +19,8 @@ Launch Template dùng AMI phù hợp, instance profile `delivery-ec2-role`, `del
 | ALB | Internet-facing; public-a và public-b; `delivery-alb-sg`. |
 | ASG | app-a và app-b; attach `delivery-app-tg`. |
 | EC2 service | `delivery.service`; executable `/opt/delivery/current/WedNightFury`. |
-![Hinh41](/workshop-website/images/5-Workshop/image41.png)
-![Hinh42](/workshop-website/images/5-Workshop/image42.png)
+![Hinh41](/reportaws/images/5-Workshop/image41.png)
+![Hinh42](/reportaws/images/5-Workshop/image42.png)
 5.9.3. Deploy release theo symlink
 ```bash
 RELEASE=20260722-01

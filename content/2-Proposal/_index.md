@@ -27,7 +27,7 @@ The Auto Scaling Group (ASG) architecture automatically adjusts server capacity 
 ### 3. Solution Architecture
 The platform is deployed in the AWS Region `ap-southeast-1` (Singapore) using a Multi-Availability Zone (Multi-AZ) distributed network design to ensure high availability.
 
-![Architecture](/workshop-website/images/2-Proposal/Picture1.png)
+![Architecture](/reportaws/images/2-Proposal/image1.png)
 
 *AWS Services & Core Technologies*
 - *AWS IAM & Security*: Access management via IAM Roles for EC2/Lambda and credential security using AWS Secrets Manager.

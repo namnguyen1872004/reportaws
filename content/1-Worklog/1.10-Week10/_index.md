@@ -1,26 +1,30 @@
----
+﻿---
 title: "Week 10 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-07-06
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
 
-
 ### Week 10 Objectives:
-* Complete Epic 4 (Mermaid Mindmap).
-* Execute Group 1 Tasks: Tech Debt Cleanup.
+* Design data models and normalize database schemas for core entities: Rooms, Tenants, Contracts, Invoices.
+* Design wireframes and user interfaces (UI) for main management screens, ensuring alignment with Use Cases and Architecture.
 
-### Tasks to Deploy This Week:
-| Day | Task | Start Date | Completion Date | Documentation Source |
+### Tasks to Implement This Week:
+| Day | Task | Start Date | End Date | Documentation / Tools |
 | --- | --- | --- | --- | --- |
-| 2 | - Develop Backend logic to generate Mermaid.js summary code <br> - Integrate `mermaid` library (^11.15.0) on Frontend | 19/06/2026 | 19/06/2026 | Mermaid.js Docs |
-| 3 | - Task 1.1: Fix 404 bug on Personal Library page (`fe/app/library/page.tsx`, `fe/middleware.ts`) | 20/06/2026 | 20/06/2026 | Next.js Routing |
-| 4 | - Task 1.2: Protect `GET /job/{jobId}` endpoint <br> - Apply JWT Authorizer to `be/lib/be-stack.ts` | 21/06/2026 | 21/06/2026 | AWS CDK Auth |
-| 5 | - Task 1.3: Code cleanup <br>&emsp; + Remove Debug Panel in `UploadView.tsx` <br>&emsp; + Un-hardcode AWS Secrets Manager ARN | 22/06/2026 | 22/06/2026 | AWS Secrets Manager |
-| 6 | - Task 1.3: Enable Cache TTL 300s for Lambda Authorizer on Production <br> - Review all remaining technical debt | 23/06/2026 | 23/06/2026 | AWS API Gateway Caching |
+| Mon | - Identify data entities and core system attributes.<br> - Sketch the overall data model. | 06/07/2026 | 06/07/2026 | Database Design Tools |
+| Tue | - Design relationships between Rooms, Tenants, Contracts, and Invoices.<br> - Define primary keys, foreign keys, and data constraints. | 07/07/2026 | 07/07/2026 | ERD Tools |
+| Wed | - Finalize the database schema and normalize tables.<br> - Verify schema capability to satisfy identified system features. | 08/07/2026 | 08/07/2026 | DB Schema Specification |
+| Thu | - Design wireframes for login, dashboard, and catalog management screens.<br> - Map user interaction workflows for each user group. | 09/07/2026 | 09/07/2026 | Figma / Wireframing Tools |
+| Fri | - Design UI for room, tenant, contract, and invoice management.<br> - Cross-reference UI designs against Use Case Diagrams, database schemas, and Architecture Diagrams. | 10/07/2026 | 10/07/2026 | UI/UX Design Docs |
 
-### Week 10 Achievements:
-* Mindmap rendering via Mermaid functions properly.
-* Resolved all critical technical issues (JWT security for Job endpoint, 404 error on Library page).
-* The project is secure and ready for multi-environment deployment (Dev/Prod).
+### Week 10 Achieved Results:
+* Defined entities, attributes, primary keys, foreign keys, and relationships between Rooms, Tenants, Contracts, and Invoices.
+* Finalized database schemas and verified their ability to meet system functional requirements.
+* Designed wireframes and interfaces for core management features, ensuring alignment with Use Cases and Architecture Diagrams.
+
+### Week 10 Evaluation:
+* **Completion Level:** Good. Database and interface designs are relatively well-synchronized with business requirements.
+* **Strengths:** Verified alignments across data models, user workflows, and system functions.
+* **Areas for Improvement:** Need to further evaluate database indexing, constraints, edge cases, and responsive UI rendering.

@@ -5,17 +5,31 @@ weight: 1
 chapter: false
 ---
 
-    
 # Internship Report
 
+<style>
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #FF9900;
+}
+</style>
 
+<center>
+
+<img src="/reportaws/images/avatar.jpg" class="avatar" alt="Avatar">
+
+</center>
 
 ### Student Information:
-&emsp; **Full Name:** Le Than
 
-&emsp; **Phone Number:** 0393157003 
+&emsp; **Full Name:** Nguyen Hoai Nam
 
-&emsp; **Email:** lethan0972@gmail.com
+&emsp; **Phone Number:** 0941969269
+
+&emsp; **Email:** hoainam1872004
 
 &emsp; **University:** Ho Chi Minh City University of Technology
 
@@ -27,8 +41,7 @@ chapter: false
 
 &emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Internship Duration:** From 17/04/2026 to 09/07/2026
-
+&emsp; **Internship Duration:** From 04/05/2026 to 25/07/2026
 
 ### Report Content
 

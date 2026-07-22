@@ -16,11 +16,11 @@ Tạo bucket `delivery-dev-pod-<unique-suffix>` tại `ap-southeast-1`, bật Bl
 | Chữ ký | pod/{orderId}/signature/{guid}.png |
 | Minh chứng giao thất bại | failed-evidence/{orderId}/{guid}.png |
 | Gói triển khai | deployments/{release}.tar.gz |
-![Hinh25](/workshop-website/images/5-Workshop/image25.png)
-![Hinh26](/workshop-website/images/5-Workshop/image26.png)
+![Hinh25](/reportaws/images/5-Workshop/image25.png)
+![Hinh26](/reportaws/images/5-Workshop/image26.png)
 5.6.2. S3 Gateway VPC Endpoint
 Tạo Gateway Endpoint `com.amazonaws.ap-southeast-1.s3` và associate với `delivery-app-rt`. EC2 private truy cập S3 mà không cần đi qua NAT cho traffic S3.
-![Hinh27](/workshop-website/images/5-Workshop/image27.png)
+![Hinh27](/reportaws/images/5-Workshop/image27.png)
 Kiểm tra route: Endpoint phải gắn đúng application route table; bucket policy/KMS policy vẫn phải cho phép IAM Role tương ứng.
 
 5.6.3. Thay đổi trong ứng dụng
