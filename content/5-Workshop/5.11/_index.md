@@ -8,6 +8,7 @@ pre: " <b> 5.11. </b> "
 Cleanup is a mandatory part of the workshop. Before deleting resources, you must save evidence, backup data worth retaining, and explicitly document which resources were deleted, retained, or never created.
 
 5.11.1. Safety Principles
+
 Confirm you are in the correct AWS account and region; CloudFront/WAF resources have global or specific scopes.
 Stop producers and new business actions before manipulating SQS, Lambda, and databases.
 Archive screenshots, logs, migration history, queue/DLQ states, and submission data outside the resources slated for deletion.
@@ -47,6 +48,7 @@ aws rds describe-db-instances --region ap-southeast-1
 ```
 
 5.11.4. Network Teardown Checklist
+
 - [ ] VPC endpoints deleted.
 - [ ] NAT Gateway in Deleted state.
 - [ ] Elastic IP of the NAT released independently.

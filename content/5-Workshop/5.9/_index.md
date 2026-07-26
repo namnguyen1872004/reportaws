@@ -8,7 +8,10 @@ pre: " <b> 5.9. </b> "
 This is the stage to package all integrations into a final release running behind the ALB. Only when the Target Group is Healthy and business scenarios pass should you proceed to CloudFront/WAF/Monitoring.
 
 5.9.1. Launch Template and Auto Scaling
+
 The Launch Template uses an appropriate AMI, the instance profile `delivery-ec2-role`, `delivery-ec2-sg`, and a sufficient root volume. The ASG is placed across two application subnets; to save costs in the workshop, use min/desired/max = 1/1/1 or max = 2 when scaling tests are required.
+![Hinh40](/reportaws/images/5-Workshop/image40.png)
+![Hinh43](/reportaws/images/5-Workshop/image43.png)
 
 5.9.2. Target Group and ALB
 
@@ -18,6 +21,8 @@ The Launch Template uses an appropriate AMI, the instance profile `delivery-ec2-
 | ALB | Internet-facing; public-a and public-b; `delivery-alb-sg`. |
 | ASG | app-a and app-b; attach `delivery-app-tg`. |
 | EC2 service | `delivery.service`; executable `/opt/delivery/current/WedNightFury`. |
+![Hinh41](/reportaws/images/5-Workshop/image41.png)
+![Hinh42](/reportaws/images/5-Workshop/image42.png)
 
 5.9.3. Symlink-based Release Deployment
 ```bash

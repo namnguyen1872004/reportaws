@@ -8,10 +8,12 @@ pre: " <b> 5.8. </b> "
 After the event pipeline is stable, replace Nominatim with Amazon Location so the entire core flow uses target services before the final end-to-end test.
 
 5.8.1. Integration Design
+
 The backend uses the `AWSSDK.GeoPlaces` package and an IAM Role to call SearchText/ReverseGeocode.
 The browser only calls the internal APIs `/api/location/search` and `/api/location/reverse`; it does not receive AWS credentials.
 The API returns a stable model containing `displayName`, `title`, `latitude`, and `longitude` so the UI does not depend directly on the SDK response.
 Do not silently fall back to Nominatim after the cutover; if a rollback is needed, use an explicit feature flag and log the provider.
+![Hinh39](/reportaws/images/5-Workshop/image39.png)
 
 5.8.2. IAM and Environment Variables
 ```env

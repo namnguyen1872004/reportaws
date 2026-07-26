@@ -8,7 +8,11 @@ pre: " <b> 5.5. </b> "
 The database is integrated immediately after the runtime is stable because all business logic, S3 object keys, and event metadata rely on accurate data.
 
 5.5.1. DB Subnet Group and RDS
+
 Create `delivery-dev-db-subnet-group` from two database subnets in two Availability Zones. RDS MySQL 8.4 uses private access, Single-AZ for the workshop, and `delivery-rds-sg`.
+![Hinh28](/reportaws/images/5-Workshop/image28.png)
+![Hinh29](/reportaws/images/5-Workshop/image29.png)
+![Hinh30](/reportaws/images/5-Workshop/image30.png)
 Scope: Single-AZ is a cost-reduction choice for the workshop; do not present it as a Multi-AZ production setup unless actually enabled.
 
 5.5.2. Secret Contract
@@ -30,6 +34,7 @@ AWS_REGION=ap-southeast-1
 The application uses the default AWS credential provider chain. The IAM Role requires `secretsmanager:GetSecretValue` and `DescribeSecret` on the exact secret ARN; if the secret uses a customer-managed KMS key, append `kms:Decrypt` for that key.
 
 5.5.3. Safe Migration Process
+
 1. Create a manual snapshot and logical backup before any risky schema changes.
 2. Cross-check models, migration files, and the `__EFMigrationsHistory` table.
 3. Only create a new migration when the model actually changes; do not create migrations just to fix endpoint or credential errors.

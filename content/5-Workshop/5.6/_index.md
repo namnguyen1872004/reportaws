@@ -8,6 +8,7 @@ pre: " <b> 5.6. </b> "
 S3 is integrated before SQS to finalize the business flow and eliminate local disk dependencies. When an EC2 instance is replaced, media remains intact and the application can scale.
 
 5.6.1. Bucket, Encryption, and Prefixes
+
 Create a bucket `delivery-dev-pod-<unique-suffix>` in `ap-southeast-1`, enable Block Public Access, and default encryption. For the workshop, you can use SSE-S3; if using SSE-KMS, you must grant the correct key permissions to the EC2 role.
 
 | Data Type | Standard Object Key |
@@ -17,8 +18,13 @@ Create a bucket `delivery-dev-pod-<unique-suffix>` in `ap-southeast-1`, enable B
 | Failed Delivery Evidence | failed-evidence/{orderId}/{guid}.png |
 | Deployment Package | deployments/{release}.tar.gz |
 
+![Hinh25](/reportaws/images/5-Workshop/image25.png)
+![Hinh26](/reportaws/images/5-Workshop/image26.png)
+
 5.6.2. S3 Gateway VPC Endpoint
+
 Create a Gateway Endpoint `com.amazonaws.ap-southeast-1.s3` and associate it with `delivery-app-rt`. Private EC2 instances access S3 without routing S3 traffic through NAT.
+![Hinh27](/reportaws/images/5-Workshop/image27.png)
 Route check: The endpoint must be attached to the correct application route table; bucket policies/KMS policies still must allow the respective IAM Role.
 
 5.6.3. Application Changes

@@ -17,6 +17,8 @@ The event pipeline is integrated only after the database and media flows are sta
 | Retention | 4 days |
 | Encryption | SQS-managed SSE or KMS per scope |
 | maxReceiveCount | 3 |
+![Hinh31](/reportaws/images/5-Workshop/image31.png)
+![Hinh32](/reportaws/images/5-Workshop/image32.png)
 
 5.7.2. Event Contract
 ```json
@@ -37,6 +39,7 @@ Do not embed credentials, cookies, connection strings, or base64 media within me
 Payloads should only contain metadata needed by the consumer; media should be referenced via object keys if truly needed.
 
 5.7.3. Publisher in ASP.NET Core
+
 1. Register `IAmazonSQS` using an IAM Role; do not hard-code Queue URLs or access keys.
 2. Create an `IOrderEventPublisher` and `OrderEventEnvelope`.
 3. Publish after `SaveChanges` or when the transaction has committed.
@@ -46,12 +49,18 @@ Payloads should only contain metadata needed by the consumer; media should be re
 Critical criteria: Manual `SendMessage` only proves the queue infrastructure works. Integration is only complete when a real order action from the app creates a message matching the contract.
 
 5.7.4. Lambda Consumer
+![Hinh33](/reportaws/images/5-Workshop/image33.png)
+![Hinh34](/reportaws/images/5-Workshop/image34.png)
+![Hinh35](/reportaws/images/5-Workshop/image35.png)
+![Hinh36](/reportaws/images/5-Workshop/image36.png)
 The Lambda role needs ReceiveMessage, DeleteMessage, ChangeMessageVisibility, GetQueueAttributes, and the required SES permissions.
 The handler must check `eventId` for idempotent processing because SQS can deliver messages more than once.
 Only delete messages after successful processing. Errors must be thrown so SQS/Lambda retries and forwards to the DLQ after reaching the limit.
 Upon first rollout, you can leave the trigger Disabled, test the handler with a sample payload, and then Enable it.
 
 5.7.5. Amazon SES
+![Hinh37](/reportaws/images/5-Workshop/image37.png)
+![Hinh38](/reportaws/images/5-Workshop/image38.png)
 ```env
 SES_FROM_ADDRESS=<VERIFIED_SENDER>
 SES_REPLY_TO=<OPTIONAL_REPLY_TO>

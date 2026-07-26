@@ -1,4 +1,4 @@
----
+﻿---
 title: "Network, IAM, and Security Baseline"
 weight: 3
 chapter: false
@@ -8,7 +8,11 @@ pre: " <b> 5.3. </b> "
 This section retains the current network baseline of the project. The goal is to ensure the ALB → EC2 → RDS flow is correctly tiered, while EC2 calls AWS services using an IAM Role instead of static access keys.
 
 5.3.1. VPC Overview
+
 Create VPC `delivery-dev-vpc` with CIDR `10.0.0.0/16`, enable DNS resolution and DNS hostnames. The VPC is divided into public, private application, and private database subnets.
+![Hinh2](/reportaws/images/5-Workshop/image2.png)
+![Hinh3](/reportaws/images/5-Workshop/image3.png)
+![Hinh4](/reportaws/images/5-Workshop/image4.png)
 Success condition: VPC is in Available state; DNS resolution and DNS hostnames are both Enabled.
 
 5.3.2. Subnets
@@ -22,22 +26,38 @@ Success condition: VPC is in Available state; DNS resolution and DNS hostnames a
 | delivery-db-a | ap-southeast-1a | 10.0.21.0/24 | Disable |
 | delivery-db-b | ap-southeast-1b | 10.0.22.0/24 | Disable |
 
+![Hinh5](/reportaws/images/5-Workshop/image5.png)
+![Hinh6](/reportaws/images/5-Workshop/image6.png)
 Cost/HA note: The workshop uses two Availability Zones but may use only one NAT Gateway to save costs. This is a demo choice; production architectures should consider NAT Gateways per AZ to avoid cross-AZ dependencies.
 
 5.3.3. Route Tables
+
 Create three separate route tables: `delivery-public-rt`, `delivery-app-rt`, and `delivery-db-rt`. The database route table only has local routes; the application route table routes outbound traffic through NAT.
+![Hinh9](/reportaws/images/5-Workshop/image9.png)
+![Hinh10](/reportaws/images/5-Workshop/image10.png)
+![Hinh11](/reportaws/images/5-Workshop/image11.png)
+![Hinh12](/reportaws/images/5-Workshop/image12.png)
+![Hinh13](/reportaws/images/5-Workshop/image13.png)
+![Hinh14](/reportaws/images/5-Workshop/image14.png)
+![Hinh15](/reportaws/images/5-Workshop/image15.png)
+![Hinh16](/reportaws/images/5-Workshop/image16.png)
 
 5.3.4. Internet Gateway
+
 1. Create `delivery-dev-igw`.
 2. Attach the Internet Gateway to `delivery-dev-vpc`.
 3. Add `0.0.0.0/0 → delivery-dev-igw` in `delivery-public-rt`.
+![Hinh7](/reportaws/images/5-Workshop/image7.png)
+![Hinh8](/reportaws/images/5-Workshop/image8.png)
 
 5.3.5. NAT Gateway
+
 1. Create `delivery-nat-a` in `delivery-public-a` and allocate an Elastic IP.
 2. Wait for the Available state.
 3. Add `0.0.0.0/0 → NAT Gateway` in `delivery-app-rt`.
 4. Do not add a NAT route to the database route table.
 Check: Do not leave routes pointing to deleted NATs; after cleanup, release the Elastic IP separately.
+![Hinh17](/reportaws/images/5-Workshop/image17.png)
 
 5.3.6. Security Groups
 
@@ -47,11 +67,18 @@ Check: Do not leave routes pointing to deleted NATs; after cleanup, release the 
 | delivery-ec2-sg | TCP 5000 | Only from delivery-alb-sg |
 | delivery-rds-sg | MySQL 3306 | Only from delivery-ec2-sg |
 
+![Hinh18](/reportaws/images/5-Workshop/image18.png)
+![Hinh19](/reportaws/images/5-Workshop/image19.png)
+![Hinh20](/reportaws/images/5-Workshop/image20.png)
 Security: Do not open ports 5000 or 3306 from `0.0.0.0/0`. EC2 administration prefers Session Manager over public SSH.
 
 5.3.7. IAM Role for EC2
-Create `delivery-ec2-role` with trust principal `ec2.amazonaws.com`. Attach `AmazonSSMManagedInstanceCore`; application permissions for S3, SQS, Secrets Manager, KMS, and GeoPlaces are granted via customer-managed policies restricted by ARN.
 
+Create `delivery-ec2-role` with trust principal `ec2.amazonaws.com`. Attach `AmazonSSMManagedInstanceCore`; application permissions for S3, SQS, Secrets Manager, KMS, and GeoPlaces are granted via customer-managed policies restricted by ARN.
+![Hinh21](/reportaws/images/5-Workshop/image21.png)
+![Hinh22](/reportaws/images/5-Workshop/image22.png)
+![Hinh23](/reportaws/images/5-Workshop/image23.png)
+![Hinh24](/reportaws/images/5-Workshop/image24.png)
 ```json
 {
   "Version": "2012-10-17",

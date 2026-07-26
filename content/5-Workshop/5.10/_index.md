@@ -8,6 +8,7 @@ pre: " <b> 5.10. </b> "
 Edge components and observability are deployed last. This approach reduces intermediary layers when debugging the core flow and prevents marking tasks complete without real evidence.
 
 5.10.1. Prerequisites to Start
+
 - [ ] ALB is stable and the Target Group is Healthy.
 - [ ] Cookies/sessions behave correctly when requests pass through the reverse proxy.
 - [ ] Dynamic APIs are not cached unintentionally.
@@ -40,6 +41,7 @@ Presentation status: If there is no real distribution/Web ACL, mark it as `PLANN
 | Costs | AWS Budgets alert before the workshop budget threshold is reached. |
 
 5.10.4. Auditing, Alerting, and Troubleshooting
+
 Forward application logs to CloudWatch Logs if the scope permits.
 Create alarms for Target Unhealthy, ALB 5xx, SQS oldest message, DLQ messages, and Lambda errors.
 CloudTrail/Config should only be marked complete when actually enabled with evidence; do not pretend production auditing is in place.
